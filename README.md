@@ -40,10 +40,6 @@ A 5-pole Chebyshev hairpin bandpass filter designed for the 2.4 GHz ISM band on 
 
 ADS (Keysight Advanced Design System), university license, for schematic entry, LineCalc substrate calculation, and circuit-level optimization. Sonnet Lite 17.56 for planar EM simulation and verification.
 
-## Status
-
-EM simulation complete. Layout cleared for PCB fabrication with minimum feature size 0.1 mm on outer coupling gaps. Post-fabrication VNA measurement (SOLT calibration, S11 and S21) will confirm simulation accuracy. A second layout iteration may be needed to correct the 55 MHz center frequency offset introduced by junction discontinuities not fully captured in the circuit model.
-
 ## References
 
 G. L. Matthaei, L. Young, and E. M. T. Jones, Microwave Filters, Impedance-Matching Networks, and Coupling Structures. Artech House, 1980.
