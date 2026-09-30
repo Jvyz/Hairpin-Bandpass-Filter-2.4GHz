@@ -2,6 +2,8 @@
 
 A 5-pole Chebyshev hairpin bandpass filter designed for the 2.4 GHz ISM band on standard FR4 substrate, following the methodology of Brady (2002). The full design flow from prototype theory through ADS circuit optimization to Sonnet planar EM simulation is documented here.
 
+![ADS circuit simulation S-parameters](images/geo.png)
+
 ## Specifications
 
 | Parameter | Target | Simulated |
@@ -20,7 +22,7 @@ A 5-pole Chebyshev hairpin bandpass filter designed for the 2.4 GHz ISM band on 
 | tan δ | ~0.02 | ~0.02 |
 | Minimum feature size | 0.2 mm | 0.1 mm (outer gaps) |
 
-![ADS circuit simulation S-parameters](images/ads_sparams.png)
+![ADS circuit simulation S-parameters](images/sparams.png)
 
 ## Repository Structure
 
