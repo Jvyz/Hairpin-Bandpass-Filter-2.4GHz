@@ -1,0 +1,6 @@
+data/
+simulation/
+*.ds
+*.log
+*.rec
+*.txt

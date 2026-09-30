@@ -1,0 +1,22 @@
+<!DOCTYPE Substrate>
+<SubstrateModel>
+    <stack BAL_NUM="0" PURPOSE_TREATMENT="USE_ALL_EXCEPT_SPECIFIED" SPECIFIED_PURPOSES="" BAL_TYPE="NONE">
+        <material BAL_NUM="0" materialname="AIR" BAL_TYPE="INHERIT"/>
+        <interface BAL_NUM="0" thickunit="micron" thick="" materialname="PERFECT_CONDUCTOR" BAL_TYPE="INHERIT"/>
+        <material BAL_NUM="0" thickunit="mil" thick="10" materialname="FR_4" BAL_TYPE="INHERIT"/>
+        <interface BAL_NUM="0" thickunit="micron" slot="1" thick="" materialname="" BAL_TYPE="INHERIT"/>
+        <material BAL_NUM="0" thickunit="mil" thick="10" materialname="FR_4" BAL_TYPE="INHERIT"/>
+        <interface BAL_NUM="0" thickunit="micron" thick="" materialname="" BAL_TYPE="INHERIT"/>
+        <material BAL_NUM="0" materialname="AIR" BAL_TYPE="INHERIT"/>
+    </stack>
+    <layers>
+        <layer sheet="0" thickunit="micron" expand="1" bottomrough="" thick="-17" angle="90" subtype="0" index="0" processRole="1" precedence="0" toprough="" materialname="Copper" layer="16" negative="0" pinsOnly="0"/>
+        <layer sheet="1" thickunit="micron" expand="0" bottomrough="" thick="0" angle="90" subtype="3" index="1" processRole="7" precedence="0" toprough="" materialname="PERFECT_CONDUCTOR" layer="17" negative="1" pinsOnly="0"/>
+        <layer sheet="0" thickunit="micron" expand="1" bottomrough="" thick="17" angle="90" subtype="0" index="2" processRole="1" precedence="0" toprough="" materialname="Copper" layer="18" negative="0" pinsOnly="0"/>
+    </layers>
+    <vias>
+        <via index2="2" platingthicknessunit="micron" platingenabled="0" platingdielectricmaterial="" subtype="0" rough="" processRole="4" precedence="0" materialname="Copper" layer="25" platingthickness="" index1="1"/>
+        <via index2="1" platingthicknessunit="micron" platingenabled="0" platingdielectricmaterial="" subtype="0" rough="" processRole="4" precedence="0" materialname="PERFECT_CONDUCTOR" layer="24" platingthickness="" index1="0"/>
+    </vias>
+    <substrates/>
+</SubstrateModel>

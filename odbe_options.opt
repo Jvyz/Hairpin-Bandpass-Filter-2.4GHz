@@ -1,0 +1,19 @@
+<!DOCTYPE TranslatorOptions>
+<OdbExportOptions>
+    <Options>
+        <Option value="false" name="AssociateShapesWithPackagePins" tip="Associate package footprint shapes with enclosed pins"/>
+        <Option value="true" name="CompressProductModel" tip="Compress Product Model tree"/>
+        <Option value="true" name="DeleteProductModelTree" tip="Delete Product Model tree if compressed"/>
+        <Option value="true" name="ExportCellParameters" tip="Export cell parameters as component properties"/>
+        <Option value="false" name="ExportPackageAsBoundingBox" tip="Export package outlines as bounding box of pins and shapes"/>
+        <Option value="false" name="FlattenADSDesign" tip="Flatten ADS design before export"/>
+        <Option value="false" name="NoInteractive" tip="No interactive features such as notification windows"/>
+        <Option value="MyFirstWorkspace_lib:substrate2" name="OdbSubstrate" tip="Reference stack-up information in the library:substrate format"/>
+        <Option value="true" name="OverwriteProductModel" tip="Overwrite an existing Product Model"/>
+        <Option value="false" name="PrependLibraryToAllPackageNames" tip="Prepend library name to all package names"/>
+        <Option value="" name="SelectedLayers" tip="Additional layers to be exported"/>
+        <Option value="false" name="ShowDuplicateLogMessages" tip="Show all log messages, including duplicates"/>
+        <Option value="false" name="SkipComponentExport" tip="Skip component package and instance export"/>
+        <Option value="false" name="VerboseLogging" tip="Enable verbose information logging"/>
+    </Options>
+</OdbExportOptions>
