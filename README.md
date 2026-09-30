@@ -20,35 +20,7 @@ A 5-pole Chebyshev hairpin bandpass filter designed for the 2.4 GHz ISM band on 
 | tan δ | ~0.02 | ~0.02 |
 | Minimum feature size | 0.2 mm | 0.1 mm (outer gaps) |
 
-## Design Flow
-
-The design replicates Brady's three-stage methodology adapted to 2.4 GHz on FR4.
-
-**Stage 1: Substrate characterization and prototype synthesis.** LineCalc in ADS was used to determine the 50 Ω microstrip width (w = 2.93 mm) and effective permittivity (K_Eff = 3.286) on FR4 1.57 mm at 2.4 GHz. A 5-pole 0.5 dB Chebyshev prototype was synthesized using standard g-values, giving the initial resonator arm lengths and coupling gap starting values.
-
-**Stage 2: ADS circuit optimization.** A half-filter schematic was built using MLIN, MBEND, MTEE, MLEF, and MCLIN elements referencing a single MSub block. Two instances of the half-filter were placed back-to-back in a top-level schematic to form the full 5-pole filter. Three GOAL blocks drove a Gradient optimizer over 200 iterations: S11 < -16 dB across 2.28 to 2.52 GHz, S21 < -28 dB below 2.0 GHz, and S21 < -28 dB above 2.8 GHz.
-
-**Stage 3: Sonnet planar EM simulation.** The optimized layout was exported to Sonnet Lite for full-wave 2.5D EM verification. The substrate stackup uses Metal1 on top (35 µm copper), FR4 dielectric (1.57 mm), and an implicit perfect ground at the box bottom. An ABS frequency sweep from 1.8 to 3.2 GHz was used. The EM result confirmed the bandpass response with a 55 MHz upward shift from the circuit model, consistent with Brady's reported discrepancy between ADS and Sonnet results.
-
-## Key Design Decisions
-
-Tapped input coupling via MTEE and MLEF stub was used at both ports rather than direct end-coupled feed, following Brady's original topology. This gives an extra degree of freedom to control external Q independently of the resonator coupling gaps.
-
-The outer coupling gaps (between the feed resonators and their neighbors) are 0.6 mm and the inner coupling gaps are 0.2 mm. This asymmetric gap choice balances inter-resonator coupling strength against individual resonator unloaded Q degradation, which is the primary loss mechanism on FR4.
-
-Lumped fringing capacitances were intentionally omitted from the final layout since the MLEF element in ADS already models open-end fringing internally. Including explicit capacitors on top of MLEF double-counts the effect and introduces layout elements with no EM simulation support in Sonnet and Momentum.
-
-## Results vs Brady
-
-| Parameter | Brady (Rogers, 3.85 GHz) | This work (FR4, 2.4 GHz) |
-|---|---|---|
-| Substrate | Rogers RO4003 | FR4 |
-| tan δ | 0.0027 | 0.020 |
-| Insertion loss | ~1 dB | 5.9 dB |
-| Return loss | > 16 dB | 27.6 dB |
-| Stopband rejection | > 28 dB | > 40 dB |
-
-The 5x difference in insertion loss directly demonstrates the substrate loss penalty of FR4 versus low-loss microwave laminate. The higher tan δ of FR4 (approximately 7x higher than Rogers) limits the unloaded Q of each resonator to roughly 80 to 120, versus 300 to 500 on Rogers, which sets a fundamental floor on achievable insertion loss for a given bandwidth and pole count.
+![ADS circuit simulation S-parameters](images/ads_sparams.png)
 
 ## Repository Structure
 
